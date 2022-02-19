@@ -3,7 +3,6 @@ dotenv.config();
 import jwt from 'jsonwebtoken';
 import jwt_decode from 'jwt-decode';
 import { NextFunction, Request, Response } from 'express';
-import { Error } from "./interface";
 
 const generateToken=(data:any)=>{
     return jwt.sign({
@@ -47,13 +46,12 @@ const validateTokenRoute=(req: Request, res: Response, next: NextFunction)=>{
     } catch (error) {
         
     }
-    const dataResponde:Error={
+    const dataResponde={
         code:"UNEXPECTED_ERROR",
         description:"Ha ocurrido un error inesperado",
         statusCode:401,
         title:"Lo sentimos",
         path:"ruta"
-
     }
     res.status(401).json(dataResponde)
 }
