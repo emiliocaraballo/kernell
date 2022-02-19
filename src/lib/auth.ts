@@ -16,7 +16,21 @@ const generateToken=(data:any)=>{
     );
 }
 
-const validateToken=(req: Request, res: Response, next: NextFunction)=>{
+const validateToken=(token:string)=>{
+    try {
+        return jwt.verify(token, process.env.JWT_SECRET  + '', async (err) => {
+            if (err) return false;  
+
+            return true;
+        });
+        
+    } catch (error) {
+        
+    }
+    return false; 
+}
+
+const validateTokenRoute=(req: Request, res: Response, next: NextFunction)=>{
     try {
         const token: string = req.headers.authorization + '';
         return jwt.verify(token, process.env.JWT_SECRET  + '', async (err) => {
@@ -46,5 +60,6 @@ const validateToken=(req: Request, res: Response, next: NextFunction)=>{
 
 export{
     generateToken,
-    validateToken
+    validateToken,
+    validateTokenRoute
 }
