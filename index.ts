@@ -1,5 +1,7 @@
-import { validate } from "./src/lib/pruebas";
-//validateData
+import { generateToken,validateToken } from "./src/lib/auth";
+import { validateForm } from "./src/lib/validate";
 export{
-    validate
+    validateForm,
+    generateToken,
+    validateToken
 }

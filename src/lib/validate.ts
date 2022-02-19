@@ -1,4 +1,4 @@
-const validateData=(type:string,str:any,lengthmin=0,lengthmax=0,status=false)=>{
+const validateForm=(type:string,str:any,lengthmin=0,lengthmax=0,status=false)=>{
     var message="";
     var regExp;
     var res=true;
@@ -109,5 +109,5 @@ const validateData=(type:string,str:any,lengthmin=0,lengthmax=0,status=false)=>{
      }
 }
 export {
-    validateData
+    validateForm
 };
