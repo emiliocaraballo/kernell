@@ -1,9 +1,5 @@
-import { Auth } from "./src/lib/auth";
-import { Error } from "./src/lib/interface";
-import { Validate } from "./src/lib/validate";
-
+import { validate } from "./src/lib/pruebas";
+//validateData
 export{
-    Auth,
-    Error,
-    Validate
+    validate
 }
