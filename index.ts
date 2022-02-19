@@ -1,10 +1,8 @@
-import { generateToken,validateToken,validateTokenRoute } from "./src/lib/auth";
+import { auth } from "./src/lib/auth";
 import { validateForm } from "./src/lib/validate";
 import {mailer} from "./src/lib/mail";
 export{
     validateForm,
-    generateToken,
-    validateToken,
-    validateTokenRoute,
+    auth,
     mailer
 }
