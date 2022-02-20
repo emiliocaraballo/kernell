@@ -1,4 +1,5 @@
 import moment from 'moment';
+import parser from 'ua-parser-js'
 class Extra{
     public generateRandomString=(num:number) => {
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
