@@ -16,6 +16,11 @@ enum typeValidate{
 }
 type TypeValidateStrings = keyof typeof typeValidate;
 
+export interface IQueryResponse {
+    ok: boolean
+    data?: any
+}
+
 export{
     ResponseValidateForm,
     TypeValidateStrings
