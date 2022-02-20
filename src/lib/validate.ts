@@ -1,6 +1,18 @@
 
 import  { ResponseValidateForm,TypeValidateStrings } from './interface';
 
+ /**
+ * validateForm
+ * en esta funcion se valida si los dato que venga de body sea lo que se especificaron ejemplo
+ * si es un string se tiene que enviar "1" no asi 1 porque esto no es un string si no un number.
+ * esta funcion busca que al momento de enviar lo dato a la base de dato cumpla con el requerimiento necesario para que no haya ningun error al insertar,actualizar.
+ * @param type 
+ * @param str 
+ * @param lengthmin 
+ * @param lengthmax 
+ * @param status 
+ * @returns 
+ */
 const validateForm = (type: TypeValidateStrings, str: any, lengthmin = 0, lengthmax = 0): ResponseValidateForm => {
     var regExp;
     var res = true;
@@ -8,7 +20,8 @@ const validateForm = (type: TypeValidateStrings, str: any, lengthmin = 0, length
     switch (type) {
         case 'string': {
             if (!(typeof str == "string")) { str = ""; }
-            regExp = new RegExp(/^[*\s]+$/g);
+            //%&]`ªº®
+            regExp = new RegExp(/^[a-zA-Z0-9ñÑáàäâÁÀÂÄéèëêÉÈÊËÊíìïîÍÌãÃÏÎóòöôÓÒÖÔÓúùüûÚÙÛÜ&ç©°,÷$!;(*/){|}Ç?:@+-_#¿.~"'^<=>[? \s]+$/g);
             res = regExp.test(str);
             break;
         }
@@ -126,8 +139,6 @@ const validateForm = (type: TypeValidateStrings, str: any, lengthmin = 0, length
         code: code
     };
 }
-
-validateForm('string','');
 export {
     validateForm
 };
