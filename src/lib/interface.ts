@@ -16,6 +16,13 @@ enum typeValidate{
 }
 type TypeValidateStrings = keyof typeof typeValidate;
 
+
+interface IError{
+    statusCode:number,
+    message:string,
+    path:string
+}
+
 export interface IQueryResponse {
     ok: boolean
     data?: any
@@ -23,5 +30,8 @@ export interface IQueryResponse {
 
 export{
     ResponseValidateForm,
-    TypeValidateStrings
+    TypeValidateStrings,
+    IError
 }
+
+
