@@ -1,5 +1,6 @@
 import moment from 'moment';
 import parser from 'ua-parser-js'
+import { Request, Response } from 'express';
 class Extra{
     public generateRandomString=(num:number) => {
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -60,6 +61,16 @@ class Extra{
             .replace(/-+/g, '-'); // collapse dashes
     
         return str;
+    }
+
+    public Error=async(req:Request,res:Response,code:number,message:string)=>{
+        res.status(code).json({
+            statusCode:code,
+            message:message,
+            timestamp: new Date().toISOString(),
+            path:req.baseUrl
+        }); 
+        return;
     }
 }
 export const extra = new Extra;

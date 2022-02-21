@@ -30,8 +30,7 @@ export interface IQueryResponse {
 
 export{
     ResponseValidateForm,
-    TypeValidateStrings,
-    IError
+    TypeValidateStrings
 }
 
 
