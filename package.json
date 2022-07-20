@@ -1,5 +1,5 @@
 {
-  "name": "kernell-smartinfo",
+  "name": "kernell",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emiliocaraballo/kernell-smartinfo.git"
+    "url": "git+https://github.com/emiliocaraballo/kernell.git"
   },
   "author": "Emilio Caraballo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emiliocaraballo/kernell-smartinfo/issues"
+    "url": "https://github.com/emiliocaraballo/kernell/issues"
   },
-  "homepage": "https://github.com/emiliocaraballo/kernell-smartinfo#readme",
+  "homepage": "https://github.com/emiliocaraballo/kernell#readme",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^8.2.0",
